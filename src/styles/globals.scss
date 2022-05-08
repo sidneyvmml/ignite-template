@@ -4,4 +4,22 @@
   padding: 0;
 }
 
+:root {
+  
+  --white: #ffffff;
+
+  --gray-300: #D7D7D7;
+  --gray-900: #1A1D23;
+
+
+}
+
+body {
+  background: var(--gray-900);
+}
+
+body, input, textarea, select, button {
+  font: 400 1rem "Inter", sans-serif;
+}
+
 // TODO

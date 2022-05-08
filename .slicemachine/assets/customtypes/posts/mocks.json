@@ -1,0 +1,61 @@
+{
+  "id": "887f4236-60a8-40c2-855b-893b6d6689de",
+  "uid": "in-non-quaerat",
+  "type": "posts",
+  "data": {
+    "title": "visualize clicks-and-mortar schemas",
+    "subtitle": "enhance intuitive communities",
+    "author": "iterate best-of-breed architectures",
+    "banner": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
+    },
+    "content": [
+      {
+        "heading": "envisioneer transparent metrics",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Voluptate tempor anim eu excepteur velit quis anim est tempor tempor dolore. Cupidatat proident amet magna duis ullamco ad. Labore velit ut consequat.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "heading": "harness one-to-one e-markets",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Deserunt duis tempor eiusmod culpa id qui.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "heading": "envisioneer open-source supply-chains",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Laborum mollit in officia nulla ex velit ex anim do culpa pariatur veniam ex dolor. Cupidatat magna dolor laborum sit et excepteur elit do sint sunt veniam ea. Do tempor sint nisi dolor incididunt ex officia enim labore.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "heading": "evolve 24/7 experiences",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Officia id aute veniam consectetur laboris culpa sit Lorem mollit adipisicing tempor nostrud sint pariatur Lorem.",
+            "spans": []
+          }
+        ]
+      }
+    ]
+  }
+}

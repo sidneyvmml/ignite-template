@@ -1,1 +1,34 @@
-// TODO
+.contentContainer {
+	max-width: 1120px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.contentPostsAuthor {
+  display: flex;
+	align-items: center;
+
+  margin-top: 1.5rem;
+
+  font-size: 0.875rem;
+  line-height: 1.05rem;
+  color: var(--info);
+
+  div {
+    display: flex;
+	  align-items: center;
+
+    & + div {
+      margin-left: 1.5rem;
+    }
+  }
+
+  svg {
+	  margin-right: 0.5rem;
+  }
+
+  time {
+    font-size: 0.875rem;
+    line-height: 1.05rem;
+  }
+}

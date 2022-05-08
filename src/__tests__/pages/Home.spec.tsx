@@ -1,5 +1,3 @@
-
-
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { GetStaticPropsContext } from 'next';
 import { ParsedUrlQuery } from 'querystring';
@@ -31,7 +29,7 @@ interface GetStaticPropsResult {
   props: HomeProps;
 }
 
-const mockedGetByTypeReturn = {
+const mockedQueryReturn = {
   next_page: 'link',
   results: [
     {
@@ -81,8 +79,11 @@ describe('Home', () => {
     };
 
     mockedPrismic.mockReturnValue({
-      getByType: () => {
-        return Promise.resolve(mockedGetByTypeReturn);
+      query: () => {
+        return Promise.resolve(mockedQueryReturn);
+      },
+      get: () => {
+        return Promise.resolve(mockedQueryReturn);
       },
     });
 
@@ -109,7 +110,7 @@ describe('Home', () => {
   });
 
   it('should be able to return prismic posts documents using getStaticProps', async () => {
-    const postsPaginationReturn = mockedGetByTypeReturn;
+    const postsPaginationReturn = mockedQueryReturn;
 
     const getStaticPropsContext: GetStaticPropsContext<ParsedUrlQuery> = {};
 
@@ -129,7 +130,7 @@ describe('Home', () => {
   });
 
   it('should be able to render posts documents info', () => {
-    const postsPagination = mockedGetByTypeReturn;
+    const postsPagination = mockedQueryReturn;
 
     render(<App postsPagination={postsPagination} />);
 
@@ -147,7 +148,7 @@ describe('Home', () => {
   });
 
   it('should be able to navigate to post page after a click', () => {
-    const postsPagination = mockedGetByTypeReturn;
+    const postsPagination = mockedQueryReturn;
 
     render(<App postsPagination={postsPagination} />, {
       wrapper: RouterWrapper,
@@ -174,7 +175,7 @@ describe('Home', () => {
   });
 
   it('should be able to load more posts if available', async () => {
-    const postsPagination = { ...mockedGetByTypeReturn };
+    const postsPagination = { ...mockedQueryReturn };
     postsPagination.results = [
       {
         uid: 'como-utilizar-hooks',
@@ -205,7 +206,7 @@ describe('Home', () => {
   });
 
   it('should not be able to load more posts if not available', async () => {
-    const postsPagination = mockedGetByTypeReturn;
+    const postsPagination = mockedQueryReturn;
     postsPagination.next_page = null;
 
     render(<App postsPagination={postsPagination} />);
